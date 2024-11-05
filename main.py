@@ -2,6 +2,7 @@ import datetime
 import envs
 import time
 
+envs.init()
 _interval = envs.INTERVAL
 _nics = envs.NICS
 
