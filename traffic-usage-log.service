@@ -1,0 +1,15 @@
+[Unit]
+Description=Network traffic usage logger
+After=network.target
+
+[Service]
+Type=simple
+User=username
+Group=username
+Restart=always
+RestartSec=10
+ExecStart=/path/to/traffic-usage-log/start.sh
+ExecStop=/usr/bin/kill "$MAINPID"
+
+[Install]
+WantedBy=multi-user.target
