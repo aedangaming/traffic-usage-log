@@ -4,6 +4,7 @@ Logs traffic usage of desired network interfaces in intervals.
 ## Quick start:
 
 * Instead of `vim` you can use the editor of your choice.
+
 1. Make a copy of `example.env` as `.env`
     ```shell
     cp example.env .env
