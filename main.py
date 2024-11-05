@@ -1,15 +1,19 @@
 import datetime
 import envs
+import os
 import time
 
 envs.init()
 _interval = envs.INTERVAL
 _nics = envs.NICS
 
+if not os.path.exists("./logs/"):
+    os.makedirs("./logs/")
+
 
 def log(msg):
     print(msg)
-    with open("/var/log/traffic-usage", "a") as file:
+    with open("./logs/traffic-usage", "a") as file:
         file.write(
             "{} | {}\n".format(
                 datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"), msg
